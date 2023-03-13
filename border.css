@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(-135deg, #881b1b, #1919e2);
+}
+.container {
+  width: 400px;
+  background: whitesmoke;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container .data {
+  width: 100%;
+  height: 40px;
+  position: relative;
+}
+.container .data input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid silver;
+}
+
+.container .data label {
+  position: absolute;
+  bottom: 10px;
+  color: rgb(128, 127, 127);
+  left: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.data input:focus ~ label,
+.data input:valid ~ label {
+  transform: translateY(-20px);
+  font-size: 15px;
+  color: #0d259c;
+}
+.container .data .underline {
+  position: absolute;
+  bottom: 0px;
+  height: 1.5px;
+  width: 100%;
+}
+.data .underline::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #4158d0;
+  transform: scaleX(0);
+  transition: transform 0.8s ease;
+}
+.data input:focus ~ .underline::before,
+.data input:valid ~ .underline::before {
+  transform: scaleX(1);
+}

@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: palevioletred;
+  color: black;
+  font-size: 2rem;
+}
+table {
+  background-color: wheat;
+  border-collapse: collapse;
+  margin: 100px auto;
+  border-radius: 9px;
+  box-shadow: 5px 5px 20px red;
+}
+tr {
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+th,
+td {
+  letter-spacing: 2px;
+  padding: 20px;
+}
+th {
+  text-transform: uppercase;
+}
+tbody tr:nth-child(odd) {
+  background-color: rgb(143, 113, 113);
+}
+
+tbody tr td:last-child {
+  background-color: orangered;
+  display: inline-block;
+  padding: 15px 10px;
+  margin: 15px auto;
+  border-radius: 10px;
+}
+tbody tr td:hover {
+  background-color: red;
+  text-transform: uppercase;
+}
